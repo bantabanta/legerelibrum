@@ -19,10 +19,12 @@ This project requires Node.js. If you do not have it installed on your machine y
 git clone the project and cd into it:
 ```bash
 git clone https://github.com/bantabanta/legere-librum.git
-cd legere-librum
 ```
 
-install npm dependencies:
+Navigate into the project and install npm dependencies:
+```bash
+cd legere-librum
+```
 ```bash
 npm install
 ```
