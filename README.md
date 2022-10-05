@@ -33,7 +33,7 @@ npm start
 
 You should now see the interactive webapp in your browser. If you don't, simply navigate to [http://localhost:3000/](http://localhost:3000).
 
-### NOTE
+### Note*
 
 The API accepts a limited number of search queries. Don't be suprised if your query returns no results despite having searched for a specific author or title!
 
