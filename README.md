@@ -2,9 +2,11 @@
 
 Legere Librum is a project built for the [Udacity React Nanodegree Program](https://www.udacity.com/course/react-nanodegree--nd019) that allows you to search for and select books from a [provided API](BooksAPI.js), storing them into one of three categories:
 
+
 - Currently Reading
 - Want to Read
 - Read
+
 
 The goal of the project is to demonstrate an understanding of the fundamentals of React by building a React-based SPA (single-page application).
 
@@ -12,7 +14,7 @@ The goal of the project is to demonstrate an understanding of the fundamentals o
 
 This project requires Node.js; if you do not have it installed on your machine you can find it [here](https://nodejs.org/en/).
 
-## Dependencies and Usage
+### Dependencies and Usage
 
 - git clone the project:
 ```bash
@@ -23,13 +25,15 @@ git clone https://github.com/bantabanta/legere-librum.git
 ```bash
 npm install
 ```
-- Serve the project locally:
+
+- Run the app in development mode:
 ```bash
 npm start
 ```
+
 You should have been directed to a webpage showing the project, otherwise navigate to [http://localhost:3000/](http://localhost:3000) in a web browser.
 
-## NOTE
+### NOTE
 
 The API accepts a limited number of search queries. Don't be suprised if your query returns no results despite having searched for a specific author or title!
 
