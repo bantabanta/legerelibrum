@@ -16,22 +16,24 @@ This project requires Node.js; if you do not have it installed on your machine y
 
 ### Dependencies and Usage
 
-- git clone the project:
+git clone the project:
 ```bash
 git clone https://github.com/bantabanta/legere-librum.git
 ```
 
-- install dependencies:
+
+install dependencies:
 ```bash
 npm install
 ```
 
-- Run the app in development mode:
+
+Run the app in development mode:
 ```bash
 npm start
 ```
 
-You should have been directed to a webpage showing the project, otherwise navigate to [http://localhost:3000/](http://localhost:3000) in a web browser.
+You should now see the interactive webapp in your browser; if you don't see it simply navigate to [http://localhost:3000/](http://localhost:3000).
 
 ### NOTE
 
