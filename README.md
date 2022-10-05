@@ -12,28 +12,36 @@ The goal of the project is to demonstrate an understanding of the fundamentals o
 
 ## Getting Started
 
-This project requires Node.js; if you do not have it installed on your machine you can find it [here](https://nodejs.org/en/).
+This project requires Node.js. If you do not have it installed on your machine you can find it [here](https://nodejs.org/en/).
 
 ### Dependencies and Usage
 
-- git clone the project:
+git clone the project and cd into it:
 ```bash
 git clone https://github.com/bantabanta/legere-librum.git
 ```
 
-- install dependencies:
+Navigate into the project and install npm dependencies:
+```bash
+cd legere-librum
+```
 ```bash
 npm install
 ```
 
-- Run the app in development mode:
+install react-router-dom:
+```bash
+npm install --save react-router-dom
+```
+
+Run the app in development mode:
 ```bash
 npm start
 ```
 
-You should have been directed to a webpage showing the project, otherwise navigate to [http://localhost:3000/](http://localhost:3000) in a web browser.
+You should now see the interactive webapp in your browser. If you don't, simply navigate to [http://localhost:3000/](http://localhost:3000).
 
-### NOTE
+### Note*
 
 The API accepts a limited number of search queries. Don't be suprised if your query returns no results despite having searched for a specific author or title!
 
