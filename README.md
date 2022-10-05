@@ -12,7 +12,7 @@ The goal of the project is to demonstrate an understanding of the fundamentals o
 
 ## Getting Started
 
-This project requires Node.js; if you do not have it installed on your machine you can find it [here](https://nodejs.org/en/).
+This project requires Node.js. If you do not have it installed on your machine you can find it [here](https://nodejs.org/en/).
 
 ### Dependencies and Usage
 
@@ -21,19 +21,17 @@ git clone the project:
 git clone https://github.com/bantabanta/legere-librum.git
 ```
 
-
 install dependencies:
 ```bash
 npm install
 ```
-
 
 Run the app in development mode:
 ```bash
 npm start
 ```
 
-You should now see the interactive webapp in your browser; if you don't see it simply navigate to [http://localhost:3000/](http://localhost:3000).
+You should now see the interactive webapp in your browser. If you don't, simply navigate to [http://localhost:3000/](http://localhost:3000).
 
 ### NOTE
 
