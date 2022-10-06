@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-const SearchBooks = () => {
+const SearchBooks = ({ books }) => {
 
   return (
     <div className="search-books">
@@ -21,6 +21,10 @@ const SearchBooks = () => {
       </div>
     </div>
   )
-}
+};
+
+SearchBooks.propTypes = {
+  books: PropTypes.array.isRequired
+};
 
 export default SearchBooks;

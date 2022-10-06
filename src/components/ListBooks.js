@@ -3,12 +3,12 @@ import Bookshelf from './Bookshelf';
 import { Link } from 'react-router-dom';
 
 const bookshelves = [
-  {key: 'CurrentlyReading' , name: 'Currently Reading'},
-  {key: 'WantToRead' , name: 'Want to Read'},
-  {key: 'Read' , name: 'Read'}
-]
+  { key: 'currentlyReading', name: 'Currently Reading' },
+  { key: 'wantToRead', name: 'Want to Read' },
+  { key: 'read', name: 'Read' }
+];
 
-const ListBooks = () => {
+const ListBooks = ({ books }) => {
 
   return (
     <div className="list-books">
@@ -17,9 +17,10 @@ const ListBooks = () => {
       </div>
       <div className="list-books-content">
         {bookshelves.map((shelf) =>
-        <Bookshelf
-        shelf={shelf}
-        key={shelf.key} />
+          <Bookshelf
+            key={shelf.key}
+            shelf={shelf}
+            books={books} />
         )}
 
       </div>
@@ -28,6 +29,10 @@ const ListBooks = () => {
       </div>
     </div>
   )
+};
+
+ListBooks.propTypes = {
+  books: PropTypes.array.isRequired
 }
 
 export default ListBooks;
