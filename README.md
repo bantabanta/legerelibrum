@@ -19,19 +19,13 @@ This project requires Node.js. If you do not have it installed on your machine y
 git clone the project and cd into it:
 ```bash
 git clone https://github.com/bantabanta/legere-librum.git
-```
-
-Navigate into the project and install npm dependencies:
-```bash
 cd legere-librum
 ```
+
+Install npm dependencies:
+
 ```bash
 npm install
-```
-
-install react-router-dom:
-```bash
-npm install --save react-router-dom
 ```
 
 Run the app in development mode:
