@@ -8,7 +8,7 @@ const bookshelves = [
   { key: 'read', name: 'Read' }
 ];
 
-const ListBooks = ({ books }) => {
+const ListBooks = ({ books, onUpdateShelf }) => {
 
   return (
     <div className="list-books">
@@ -20,6 +20,7 @@ const ListBooks = ({ books }) => {
           <Bookshelf
             key={shelf.key}
             shelf={shelf}
+            onUpdateShelf={onUpdateShelf}
             books={books} />
         )}
 
@@ -32,7 +33,8 @@ const ListBooks = ({ books }) => {
 };
 
 ListBooks.propTypes = {
-  books: PropTypes.array.isRequired
+  books: PropTypes.array.isRequired,
+  onUpdateShelf: PropTypes.func.isRequired
 }
 
 export default ListBooks;

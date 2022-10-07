@@ -17,16 +17,26 @@ function App() {
     fetchBooks();
   }, [books]);
 
+  // Fn to update shelf of given book via API
+  const updateShelf = (book, shelf) => {
+    const setShelf = async () => {
+      await BooksAPI.update(book, shelf);
+    };
+    setShelf();
+  };
+
   return (
     <Routes>
       <Route
         exact path="/"
         element={<ListBooks
+          onUpdateShelf={updateShelf}
           books={books} />}
       />
       <Route
         path="/search"
         element={<SearchBooks
+          onUpdateShelf={updateShelf}
           books={books} />}
       />
     </Routes>
