@@ -9,7 +9,7 @@ function App() {
   const [books, setBooks] = useState([]);
 
   // Load books from API on first DOM render
-  // books dependency to follow books state
+  // books dependency to rerender on books state change
   useEffect(() => {
     const fetchBooks = async () => {
       setBooks(await BooksAPI.getAll());

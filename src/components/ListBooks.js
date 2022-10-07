@@ -23,7 +23,6 @@ const ListBooks = ({ books, onUpdateShelf }) => {
             onUpdateShelf={onUpdateShelf}
             books={books} />
         )}
-
       </div>
       <div className="open-search">
         <Link to="/search">Add a book</Link>
@@ -35,6 +34,6 @@ const ListBooks = ({ books, onUpdateShelf }) => {
 ListBooks.propTypes = {
   books: PropTypes.array.isRequired,
   onUpdateShelf: PropTypes.func.isRequired
-}
+};
 
 export default ListBooks;

@@ -1,30 +1,55 @@
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import * as BooksAPI from '../BooksAPI';
+import SearchBooksResults from './SearchBooksResults';
+import SearchBooksBar from './SearchBooksBar';
 
-const SearchBooks = ({ books }) => {
+const SearchBooks = ({ books, onUpdateShelf }) => {
+  const [query, setQuery] = useState('');
+  const [queryBooks, setQueryBooks] = useState([]);
+
+  const updateQuery = (query) => {
+    setQuery(query);
+    fetchQueryBooks(query);
+  };
+
+  // API call to update books, handling no results
+  const fetchQueryBooks = (query) => {
+    if (query !== '') {
+      const setBooks = async () => {
+        const res = (await BooksAPI.search(query));
+        res.error
+          ? setQueryBooks([])
+          : setQueryBooks(res)
+      };
+      setBooks();
+    } else {
+      setQueryBooks([]);
+    };
+  };
 
   return (
     <div className="search-books">
-      <div className="search-books-bar">
-        <Link to="/" className="close-search">
-          Close
-        </Link>
-        <div className="search-books-input-wrapper">
-          <input
-            type="text"
-            placeholder="Search books by title or author.."
+      <SearchBooksBar
+        query={query}
+        onUpdateQuery={updateQuery} />
+      {
+        query !== '' && (
+          <SearchBooksResults
+            query={query}
+            queryBooks={queryBooks}
+            onUpdateShelf={onUpdateShelf}
+            onUpdateQuery={updateQuery}
+            books={books}
           />
-        </div>
-      </div>
-      <div className="search-books-results">
-        <ol className="books-grid"></ol>
-      </div>
+        )}
     </div>
   )
 };
 
 SearchBooks.propTypes = {
-  books: PropTypes.array.isRequired
+  books: PropTypes.array.isRequired,
+  onUpdateShelf: PropTypes.func.isRequired
 };
 
 export default SearchBooks;

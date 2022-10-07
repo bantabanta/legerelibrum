@@ -1,7 +1,7 @@
 import BookView from './BookView';
 import PropTypes from 'prop-types';
 
-const Bookshelf = ({ shelf, books, onUpdateShelf }) => {
+const Bookshelf = ({ books, shelf, onUpdateShelf }) => {
 
   const shelfBooks = books.filter((book) => book.shelf === shelf.key);
   return (
@@ -19,12 +19,12 @@ const Bookshelf = ({ shelf, books, onUpdateShelf }) => {
       </div>
     </div>
   )
-}
+};
 
 Bookshelf.propTypes = {
+  books: PropTypes.array.isRequired,
   shelf: PropTypes.object.isRequired,
-  onUpdateShelf: PropTypes.func.isRequired,
-  books: PropTypes.array.isRequired
+  onUpdateShelf: PropTypes.func.isRequired
 };
 
 export default Bookshelf;
