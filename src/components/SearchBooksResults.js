@@ -14,27 +14,44 @@ const SearchBooksResults = ({
     books.map(book =>
       book.id === queryBook.id && (queryBook.shelf = book.shelf)
     );
-    if (!queryBook.shelf) {
-      queryBook.shelf = 'none'
-    };
+    if (!queryBook.shelf) {queryBook.shelf = 'none'};
     return queryBook;
   });
 
   return (
     <div className="search-books-results">
-      <div>
-        <span>
-          Showing {queryBooks.length} results for '<strong>{query}</strong>'..
-          <button onClick={() => onUpdateQuery('')}>Clear search</button>
-        </span>
-      </div>
-      <ol className="books-grid">
-        {updatedQueryBooks.map((book) =>
-          <BookView
-            key={book.id}
-            onUpdateShelf={onUpdateShelf}
-            book={book} />)}
-      </ol>
+      {
+        updatedQueryBooks.length > 0
+          ? (
+            <div>
+              <span>
+                Showing {queryBooks.length} results for '<strong>{query}</strong>'..
+                <button onClick={() => onUpdateQuery('')}>Clear search</button>
+              </span>
+              <ol className="books-grid">
+                {updatedQueryBooks.map((book) =>
+                  <BookView
+                    key={book.id}
+                    onUpdateShelf={onUpdateShelf}
+                    book={book} />)}
+              </ol>
+            </div>
+          )
+          : (
+            <div>
+              <div>
+                Sorry, there are no results for '<strong>{query}</strong>'..
+                <button onClick={() => onUpdateQuery('')}>Clear search</button>
+              </div><br></br>
+              <span>Suggestions:</span>
+              <ul>
+                <li>Make sure all words are spelled correctly.</li>
+                <li>Try more general keywords.</li>
+                <li>Try fewer keywords.</li>
+              </ul>
+            </div>
+          )
+      }
     </div>
   )
 };
