@@ -1,9 +1,9 @@
-import "./App.css";
+import "../css/App.css";
 import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import ListBooks from './components/ListBooks';
-import SearchBooks from './components/SearchBooks';
-import * as BooksAPI from './BooksAPI';
+import ListBooks from './ListBooks';
+import SearchBooks from './SearchBooks';
+import * as BooksAPI from '../BooksAPI';
 
 function App() {
   const [books, setBooks] = useState([]);
