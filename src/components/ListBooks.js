@@ -15,6 +15,7 @@ const ListBooks = ({ books, onUpdateShelf }) => {
       <div className="list-books-title">
         <h1>My Books</h1>
       </div>
+
       <div className="list-books-content">
         {bookshelves.map((shelf) =>
           <Bookshelf

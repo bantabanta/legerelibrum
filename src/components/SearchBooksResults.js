@@ -23,10 +23,10 @@ const SearchBooksResults = ({
       {
         updatedQueryBooks.length > 0
           ? (
-            <div>
+            <div >
               <span>
                 Showing {queryBooks.length} results for '<strong>{query}</strong>'..
-                <button onClick={() => onUpdateQuery('')}>Clear search</button>
+                <button onClick={() => onUpdateQuery('')}>clear search</button>
               </span>
               <ol className="books-grid">
                 {updatedQueryBooks.map((book) =>
