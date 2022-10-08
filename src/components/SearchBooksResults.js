@@ -43,12 +43,24 @@ const SearchBooksResults = ({
                 Sorry, there are no results for '<strong>{query}</strong>'..
                 <button onClick={() => onUpdateQuery('')}>Clear search</button>
               </div><br></br>
-              <span>Suggestions:</span>
+              <p>Suggestions:</p>
               <ul>
+                <li>Try using a single keyword.</li>
+                <li>Try a more general keyword.</li>
                 <li>Make sure all words are spelled correctly.</li>
-                <li>Try more general keywords.</li>
-                <li>Try fewer keywords.</li>
-              </ul>
+              </ul><br></br>
+              <span>
+                Note: The API used for search functionality
+                is meant for demonstrating software development<br></br>
+                fundamentals of interacting with an API and only works
+                with a limited set of specific search keywords.<br></br>
+              </span><br></br>
+
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+
             </div>
           )
       }

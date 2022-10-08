@@ -11,7 +11,7 @@ const SearchBooksBar = ({ query, onUpdateQuery }) => {
         <input
           type="text"
           value={query}
-          placeholder="Search books by Title or Author.."
+          placeholder="Search by Title or Author.."
           onChange={(event) => onUpdateQuery(event.target.value)}
         />
       </div>
