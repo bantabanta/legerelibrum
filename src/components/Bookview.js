@@ -36,9 +36,12 @@ const BookView = ({ book, onUpdateShelf }) => {
           </div>
         </div>
         <div className="book-title">{book.title}</div>
-        {book.authors && book.authors.map((author, index) =>
-          <div key={index} className="book-authors">{author}</div>
-        )}
+        {book.authors
+          ? book.authors.map((author, index) =>
+            <div key={index} className="book-authors">{author}</div>
+          )
+          : <div className="book-authors">No author(s) listed</div>
+        }
       </div>
     </li>
   )
