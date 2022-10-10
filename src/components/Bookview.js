@@ -9,7 +9,7 @@ const BookView = ({ book, onUpdateShelf }) => {
       ? book.imageLinks.smallThumbnail
       : noImage
 
-  // handle shelf update
+  // Shelf update callback
   const handleChange = (e) => onUpdateShelf(book, e.target.value);
 
   return (

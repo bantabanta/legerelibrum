@@ -13,7 +13,7 @@ const SearchBooks = ({ books, onUpdateShelf }) => {
     fetchQueryBooks(query);
   };
 
-  // API call to update books, handling no results
+  // API call to update books, handling error
   const fetchQueryBooks = (query) => {
     if (query !== '') {
       const setBooks = async () => {

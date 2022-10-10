@@ -9,12 +9,12 @@ const SearchBooksResults = ({
   onUpdateShelf
 }) => {
 
-  // set the proper shelf for queryBooks
+  // set the proper shelf for search results
   const updatedQueryBooks = queryBooks.map(queryBook => {
     books.map(book =>
       book.id === queryBook.id && (queryBook.shelf = book.shelf)
     );
-    if (!queryBook.shelf) {queryBook.shelf = 'none'};
+    if (!queryBook.shelf) { queryBook.shelf = 'none' };
     return queryBook;
   });
 
@@ -33,7 +33,8 @@ const SearchBooksResults = ({
                   <BookView
                     key={book.id}
                     onUpdateShelf={onUpdateShelf}
-                    book={book} />)}
+                    book={book} />
+                )}
               </ol>
             </div>
           )
@@ -48,22 +49,16 @@ const SearchBooksResults = ({
                 <li>Try using a single keyword.</li>
                 <li>Try a more general keyword.</li>
                 <li>Make sure all words are spelled correctly.</li>
-              </ul><br></br>
+              </ul>
+              <br></br>
               <span>
                 Note: The API used for search functionality
                 is meant for demonstrating software development<br></br>
                 fundamentals of interacting with an API and only works
                 with a limited set of specific search keywords.<br></br>
-              </span><br></br>
-
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-
+              </span>
             </div>
-          )
-      }
+          )}
     </div>
   )
 };
