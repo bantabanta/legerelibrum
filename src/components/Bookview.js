@@ -4,6 +4,7 @@ import noImage from '../icons/no-image.jpg';
 const BookView = ({ book, onUpdateShelf }) => {
 
   // set book thumbnail fallback
+  // filename issue test
   const thumbnail = () =>
     book.imageLinks
       ? book.imageLinks.smallThumbnail
